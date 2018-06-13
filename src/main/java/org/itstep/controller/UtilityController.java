@@ -1,9 +1,13 @@
 package org.itstep.controller;
 
+
 import org.itstep.view.View;
 
 import java.util.Scanner;
 
+/**
+ * Created by student on 26.09.2017.
+ */
 public class UtilityController {
     private Scanner scanner;
     private View view;
@@ -19,7 +23,6 @@ public class UtilityController {
         while( !(scanner.hasNext() && (res = scanner.next()).matches(regex))) {
             view.printWrongStringInput(message);
         }
-        System.out.println("final");
         return res;
     }
 }

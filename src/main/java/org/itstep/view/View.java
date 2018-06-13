@@ -1,10 +1,10 @@
 package org.itstep.view;
+
 import java.util.Locale;
 import java.util.ResourceBundle;
 
 import static org.itstep.view.TextConstant.INPUT_STRING_DATA;
 import static org.itstep.view.TextConstant.WRONG_INPUT_DATA;
-
 
 /**
  * Created by student on 26.09.2017.
@@ -16,28 +16,28 @@ public class View {
     public static final ResourceBundle bundle =
             ResourceBundle.getBundle(
                     MESSAGES_BUNDLE_NAME,
-                    new Locale("ua", "UA"));  // Ukrainian
-                    //new Locale("en"));        // English
+                    //new Locale("ua", "UA"));  // Ukrainian
+                    new Locale("en"));        // English
 
     //Utilities methods
+
     /**
-     *
      * @param message
      */
-    public void printMessage(String message){
+    public void printMessage(String message) {
         System.out.println(message);
     }
+
     /**
-     *
      * @param message
      * @return
      */
-    public String concatenationString(String... message){
-            StringBuilder concatString = new StringBuilder();
-            for(String v : message) {
-                concatString = concatString.append(v);
-            }
-            return new String(concatString);
+    public String concatenationString(String... message) {
+        StringBuilder concatString = new StringBuilder();
+        for (String v : message) {
+            concatString = concatString.append(v);
+        }
+        return new String(concatString);
     }
 
     public void printStringInput(String message) {
